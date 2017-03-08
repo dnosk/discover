@@ -119,7 +119,7 @@ function spotifyRefreshToken(userId) {
 function getUserPlaylists(accessToken, userId, spotifyId) {
 	var api = new SpotifyWebApi({
 		accessToken: accessToken
-    });
+	});
 	api.getUserPlaylists(spotifyId)
 	.then(function(data) {
 		var playlists = []
@@ -138,7 +138,7 @@ function getUserPlaylists(accessToken, userId, spotifyId) {
 				}
 				playlists.push(metadata)
 			}
-        })
+    })
         getPlaylist(api, userId, playlists)
 	}, function(err) {
 		console.log('Could not grab Spotify data', err);
